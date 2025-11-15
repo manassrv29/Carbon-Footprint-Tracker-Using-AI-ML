@@ -4,7 +4,7 @@ import { GPSTracker } from './GPSTracker';
 import { OCRScanner } from './OCRScanner';
 import { BarcodeScanner } from './BarcodeScanner';
 import { Card } from '../ui/Card';
-import type { TravelRoute, Location } from '../../services/gpsTrackingService';
+import type { TravelRoute, Location } from '../../types';
 import type { BillData } from '../../services/ocrService';
 import type { FoodCarbonData } from '../../services/barcodeService';
 

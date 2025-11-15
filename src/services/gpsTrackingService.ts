@@ -1,31 +1,4 @@
-export interface Location {
-  latitude: number;
-  longitude: number;
-  timestamp: number;
-  accuracy?: number;
-}
-
-export interface TravelRoute {
-  id: string;
-  startLocation: Location;
-  endLocation: Location;
-  distance: number; // in kilometers
-  duration: number; // in minutes
-  transportMode: 'walking' | 'cycling' | 'two_wheeler' | 'driving' | 'public_transport';
-  avgSpeed: number; // in km/h
-  maxSpeed: number; // in km/h
-  co2Emissions: number; // in kg
-  confidence: number; // confidence in transport mode detection (0-1)
-  createdAt: Date;
-}
-
-export interface GPSTrackingOptions {
-  enableHighAccuracy?: boolean;
-  timeout?: number;
-  maximumAge?: number;
-  minDistanceThreshold?: number; // minimum distance to consider as movement (meters)
-  trackingInterval?: number; // tracking interval in milliseconds
-}
+import type { Location, TravelRoute, GPSTrackingOptions } from '../types';
 
 class GPSTrackingService {
   private watchId: number | null = null;

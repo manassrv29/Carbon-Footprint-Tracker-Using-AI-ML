@@ -2,25 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { MapPin, Navigation, Car, Bike, Footprints, Bus, Play, Square, Settings } from 'lucide-react';
 import GPSTrackingService from '../../services/gpsTrackingService';
 import { Card } from '../ui/Card';
-
-// Define interfaces locally to avoid import issues
-interface Location {
-  latitude: number;
-  longitude: number;
-  timestamp: number;
-  accuracy?: number;
-}
-
-interface TravelRoute {
-  id: string;
-  startLocation: Location;
-  endLocation: Location;
-  distance: number;
-  duration: number;
-  transportMode: 'walking' | 'cycling' | 'driving' | 'public_transport';
-  co2Emissions: number;
-  createdAt: Date;
-}
+import type { Location, TravelRoute } from '../../types';
 
 interface GPSTrackerProps {
   onRouteDetected?: (route: TravelRoute) => void;
