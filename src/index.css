@@ -1,3 +1,6 @@
+/* Import desktop-optimized styles */
+@import './styles/desktop-optimized.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +23,3 @@ html, body {
 #root {
   min-height: 100vh;
 }
-
-/* Import desktop-optimized styles */
-@import './styles/desktop-optimized.css';
