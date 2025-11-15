@@ -12,10 +12,10 @@ function App() {
   const isProduction = import.meta.env.PROD;
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
   
-  // If in production and no API URL is set, show the fallback app
-  if (isProduction && (!apiBaseUrl || apiBaseUrl.includes('your-backend-url'))) {
-    return <FallbackApp />;
-  }
+  // Temporarily disable fallback to show full app interface
+  // if (isProduction && (!apiBaseUrl || apiBaseUrl.includes('your-backend-url'))) {
+  //   return <FallbackApp />;
+  // }
 
   return (
     <ErrorBoundary>
